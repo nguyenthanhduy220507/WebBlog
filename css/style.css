@@ -11,7 +11,10 @@
         font-size: 3.5rem;
     }
 }
-
+/* search-placeholder-center */
+form .center-placeholder::placeholder {
+  text-align: center;
+}
 
 
 

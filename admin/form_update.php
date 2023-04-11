@@ -23,7 +23,7 @@
       $list = mysqli_fetch_array($result);
       require 'error_succesful.php';
     ?>
-    <form method="post" action ="process_update.php" class="ms-5 mt-5">
+    <form method="post" action ="process_update.php" class="ms-5 mt-5"  enctype="multipart/form-data">
       <input type="hidden" class="form-control" name="id" value="<?php echo $list['id'] ?>">
       <div class="mb-3">
         <label class="form-label">Title</label>
@@ -38,8 +38,13 @@
         <input type="text" class="form-control" name="content" value="<?php echo $list['content'] ?>">
       </div>
       <div class="mb-3">
-        <label class="form-label">Images</label>
-        <input type="text" class="form-control" name="image" value="<?php echo $list['image'] ?>">
+        <label class="form-label">Images new</label>
+        <input type="file" class="form-control" name="image_new">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Images Old</label><br>
+        <img src="photos/<?php echo $list['image'] ?>" alt="" height="100">
+        <input type="hidden" class="form-control" name="image_old" value="<?php echo $list['image'] ?>">
       </div>
       <button type="submit" class="btn btn-primary">Update</button>
     </form>

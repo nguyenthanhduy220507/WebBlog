@@ -15,7 +15,7 @@
     <?php 
       require 'error_succesful.php';
     ?>
-    <form method="post" action ="process_insert.php" class="ms-5 mt-5">
+    <form method="post" action ="process_insert.php" class="ms-5 mt-5" enctype="multipart/form-data">
       <div class="mb-3">
         <label class="form-label">Title</label>
         <input type="text" class="form-control" name="title">
@@ -30,7 +30,7 @@
       </div>
       <div class="mb-3">
         <label class="form-label">Images</label>
-        <input type="text" class="form-control" name="image">
+        <input type="file" class="form-control" name="image">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

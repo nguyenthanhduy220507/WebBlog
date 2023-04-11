@@ -50,7 +50,7 @@
         <td><?php echo $list['title'] ?></td>
         <td><?php echo $list['description'] ?></td>
         <td>
-          <img src="<?php echo $list['image'] ?>" alt="" height="100">
+          <img src="photos/<?php echo $list['image'] ?>" alt="" height="100">
         </td>
         <td class="">
           <a href="show.php?id=<?php echo $list['id'] ?>" class="btn btn-info text-white ms-2 ">Show</a>

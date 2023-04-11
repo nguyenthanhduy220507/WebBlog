@@ -18,7 +18,7 @@
     $array_result_page = mysqli_fetch_array($result_page);
     $total_value_page = $array_result_page['count(*)'];
     
-    $value_in_page = 1;
+    $value_in_page = 3;
     
     $page_value = ceil($total_value_page / $value_in_page);
     

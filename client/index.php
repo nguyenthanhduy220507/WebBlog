@@ -72,7 +72,6 @@
                     <i class="znake-icon-bigcartel">
                         <strong> Home</strong>
                     </i>
-
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -85,9 +84,9 @@
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <?php $active = 'class="active"'; ?>
-                 <!-- cắt mảng thành 3 phần tử cuối cùng -->
-                 <?php foreach ($result_silde as $index => $list) : ?>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="<?php echo $index; ?>" <?php echo $active; ?>  ></button>
+                <!-- cắt mảng thành 3 phần tử cuối cùng -->
+                <?php foreach ($result_silde as $index => $list) : ?>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="<?php echo $index; ?>" <?php echo $active; ?>></button>
                     <?php $active = ''; ?>
                 <?php endforeach; ?>
             </div>
@@ -96,11 +95,11 @@
                 <!-- duyệt  -->
                 <?php foreach ($result_silde as $list) : ?>
                     <div class="carousel-item <?php echo $active; ?>">
-                        <img src="<?php echo $list['image'] ?>" class="d-block w-100" alt="<?php echo $list['title'] ?>">
+                        <img src="../admin/photos/<?php echo $list['image'] ?>" class="d-block w-100" alt="<?php echo $list['title'] ?>">
                         <div class="carousel-caption d-none d-md-block">
-                            <h1><?php echo $list['title'] ?></h1>
-                            <p><?php echo $list['description'] ?></p>
-                            <a href="show.php?id=<?php echo $list['id'] ?>" class="btn btn-lg btn-primary">View</a>
+                            <h1 class="text-dark"><?php echo $list['title'] ?></h1>
+                            <p class="text-dark"><?php echo $list['description'] ?></p>
+                            <a href="blog.php?id=<?php echo $list['id'] ?>" class="btn btn-lg btn-primary">View</a>
                         </div>
                     </div>
                     <?php $active = ''; ?>
@@ -115,21 +114,26 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <div class="album py-5 bg-light">
-            <div class="container">
 
+        <div class="album py-5 bg-light">
+        <form class="d-flex mb-3">
+            <input class="form-control me-2 center-placeholder" type="search" placeholder="Enter what you want to search for..." aria-label="Search" name="search" value="<?php echo $search ?>">
+            <button class="btn btn-outline-secondary" type="submit"><i class="znake-icon-spotify-search"></i></button>
+        </form>
+
+            <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <?php foreach ($result as $list) : ?>
                         <div class="col">
                             <div class="card shadow-sm">
-                                <img src="<?php echo $list['image'] ?>" alt="<?php echo $list['title'] ?>" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                                <img src="../admin/photos/<?php echo $list['image'] ?>" alt="<?php echo $list['title'] ?>" class="bd-placeholder-img card-img-top" width="100%" height="225">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $list['title'] ?></h5>
                                     <p class="card-text"><?php echo $list['description'] ?></p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                            <a href="show.php?id=<?php echo $list['id'] ?>" class="btn btn-sm btn-outline-dark">View</a>
-                                            <a href="/Bai3/c.php?id=<?php echo $list['id'] ?>" class="btn btn-sm btn-outline-primary">Like</a>
+                                            <a href="blog.php?id=<?php echo $list['id'] ?>" class="btn btn-sm btn-outline-dark">View</a>
+                                            <a href="id=<?php echo $list['id'] ?>" class="btn btn-sm btn-outline-primary">Like</a>
                                         </div>
                                         <small class="text-muted">Like +1</small>
                                     </div>
@@ -140,8 +144,8 @@
                 </div>
             </div>
         </div>
-        <?php 
-            require '../admin/prev_next.php';
+        <?php
+        require '../admin/prev_next.php';
         ?>
     </main>
     <footer class="text-muted py-5 bg-dark">
