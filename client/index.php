@@ -58,9 +58,9 @@
                         <ul class="list-unstyled">
                             <li><a href="#" class="text-white text-decoration-none"><i class="znake-icon-twitter text-white"> Follow on Twitter</i></a></li>
                             <li><a href="#" class="text-white text-decoration-none"><i class="znake-icon-facebook text-white"> Like on Facebook</i></a></li>
-                            <li><a href="#" class="text-white text-decoration-none"><i class="znake-icon-github text-primary"> </i> Github</a></li>
-                            <li><a href="/html/group.html" class="text-white text-decoration-none"><i class="znake-icon-spotify-user text-primary"> </i> Group</a></li>
-                            <li><a href="/html/contact.html" class="text-white text-decoration-none"><i class="znake-icon-bancontact text-primary"> </i> Liên Hệ</a></li>
+                            <li><a href="https://github.com/nguyenthanhduy220507/WebBlog" class="text-white text-decoration-none"><i class="znake-icon-github text-primary"> </i> Github</a></li>
+                            <li><a href="/client/group.html" class="text-white text-decoration-none"><i class="znake-icon-spotify-user text-primary"> </i> Group</a></li>
+                            <li><a href="/client/contact.html" class="text-white text-decoration-none"><i class="znake-icon-bancontact text-primary"> </i> Liên Hệ</a></li>
                         </ul>
                     </div>
                 </div>
