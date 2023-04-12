@@ -32,55 +32,13 @@
 </head>
 
 <body>
-
-    <header>
-        <div class="collapse bg-dark" id="navbarHeader">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-md-7 py-4">
-                        <h4 class="text-white">About</h4>
-                        <p class="text-muted">Add some information about the album below, the author, or any other
-                            background context. Make it a few sentences long so folks can pick up some informative
-                            tidbits. Then, link them off to some social networking sites or contact information.</p>
-                    </div>
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Contact</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white text-decoration-none"><i
-                                        class="znake-icon-twitter text-white"> Follow on Twitter</i></a></li>
-                            <li><a href="#" class="text-white text-decoration-none"><i
-                                        class="znake-icon-facebook text-white"> Like on Facebook</i></a></li>
-                            <li><a href="https://github.com/nguyenthanhduy220507/WebBlog" class="text-white text-decoration-none"><i
-                                        class="znake-icon-github text-white"> Github</i></a></li>
-                            <li><a href="#" class="text-white text-decoration-none"><i
-                                class="znake-icon-spotify-user text-primary"></i> Group</a></li>      
-                            <li><a href="/client/contact.html" class="text-white text-decoration-none"><i
-                                class="znake-icon-bancontact text-primary"></i> Liên Hệ</a></li>      
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="navbar navbar-dark bg-dark shadow-sm" style="margin-bottom: 4rem;">
-            <div class="container">
-                <a href="/client/index.php" class="navbar-brand d-flex align-items-center">
-                    <i class="znake-icon-bigcartel">
-                        <strong> Home</strong>
-                    </i>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
-                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
+    <?php 
+        require 'header.php';
+    ?>
     <main>
-        <div class="container marketing mb-5">
-
+        <div class="container marketing">
             <!-- Three columns of text below the carousel -->
-            <div class="row">
+            <div class="row" style="margin-top:125px; margin-bottom:100px;">
               <div class="col-lg-3">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
         
@@ -113,23 +71,11 @@
         </div>
     </main>
 
-    <footer class="text-muted py-5 bg-dark" style="margin-top: 7rem;">
-        <div class="container">
-            <p class="float-end mb-1">
-                <a href="#" class="text-decoration-none text-white fw-bold fs-4">Hi !</a>
-            </p>
-            <p class="mb-1">273 An Dương Vương Quận 5 Thành Phố Hồ Chí Minh &copy; Coppy right!</p>
-            <p class="mb-0">Công Nghệ Thông Tin Khóa K20 <a href="#" class="text-white text-decoration-none">&copy;SGU-fit</a> Web Blog <a
-                    href="#" class="text-decoration-none text-white">Python Linux Mã Nguồn Mở</a>.</p>
-        </div>
-    </footer>
-
-
+    <?php 
+        require 'footer.php';
+    ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
-
 </body>
-
 </html>

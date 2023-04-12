@@ -11,60 +11,60 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="shortcut icon" type="image/x-icon" href="/img/earth.jpg">
-  <title>Admin</title>
+  <title>test</title>
 </head>
 
 <body>
   <?php
-  require '../client/connect.php';
-  require 'search.php';
-  require 'page_search.php';
+    require '../../client/connect.php';
+    $sql = "SELECT * FROM contact";
+    $result = mysqli_query($ket_noi, $sql);
+//   require '../search.php';
+//   require '../page_search.php';
   ?>
 
-  <h1 class="ms-2 text-center">ADMIN</h1>
+  <h1 class="ms-2 text-center">ADMIN - Contact</h1>
   <?php
-    require 'menu.php';
+    require '../menu.php';
+//   require 'error_succesful.php';
   ?>
-  <a href="form_insert.php" class="btn btn-primary text-white ms-2 mb-2">Create New Products</a><br>
-  <?php
-  require 'error_succesful.php';
-  ?>
-  <form class="d-flex mb-3">
+  <!-- <form class="d-flex mb-3">
     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search" value="<?php echo $search ?>">
     <button class="btn btn-outline-secondary" type="submit"><i class="znake-icon-spotify-search"></i></button>
-  </form>
-  <table class="table table-bordered table-hover" style="table-layout: fixed;">
+  </form> -->
+  <table class="table table-bordered table-hover mt-4" style="table-layout: fixed;">
     <colgroup>
       <col style="width: 5%">
       <col style="width: 15%">
-      <col style="width: 25%">
+      <col style="width: 20%">
+      <col style="width: 10%">
       <col style="width: 25%">
       <col style="width: 25%">
     </colgroup>
     <th scope="col">Id</th>
-    <th scope="col">Title</th>
-    <th scope="col">Description</th>
-    <th scope="col">Image</th>
+    <th scope="col">Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Phone</th>
+    <th scope="col">Content</th>
     <th scope="col">Action</th>
     </tr>
     <?php foreach ($result as $list) : ?>
       <tr>
         <td><?php echo $list['id'] ?></td>
-        <td><?php echo $list['title'] ?></td>
-        <td><?php echo $list['description'] ?></td>
-        <td>
-          <img src="photos/<?php echo $list['image'] ?>" alt="" height="100">
-        </td>
+        <td><?php echo $list['name'] ?></td>
+        <td><?php echo $list['email'] ?></td>
+        <td><?php echo $list['phone'] ?></td>
+        <td><?php echo $list['content'] ?></td>
         <td class="">
           <a href="show.php?id=<?php echo $list['id'] ?>" class="btn btn-info text-white ms-2 ">Show</a>
-          <a href="form_update.php?id=<?php echo $list['id'] ?>" class="btn btn-primary text-white ms-2 ">Edit</a>
+          <a href="form_update.php?id=<?php echo $list['id'] ?>" class="btn btn-primary text-white ms-2 ">FeedBack</a>
           <a href="delete.php?id=<?php echo $list['id'] ?>" class="btn btn-danger text-white ms-2">Delete</a>
         </td>
       </tr>
     <?php endforeach ?>
   </table>
   <?php 
-    require 'prev_next.php';
+    // require 'prev_next.php';
   ?>
 
 

@@ -8,13 +8,8 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
     <link rel="shortcut icon" type="image/x-icon" href="/img/that_right.jpg">
-
     <title>Zz</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
-
-
-
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -28,10 +23,7 @@
     <meta name="theme-color" content="#7952b3">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/Znake-Spotify-v1.0/style.css">
-
-
 </head>
-
 <body>
     <?php
     require 'connect.php';
@@ -43,43 +35,9 @@
     $list_side = mysqli_fetch_all($result_silde, MYSQLI_ASSOC); //lấy tất cả các phần tủ của mảng
     $list_three_side_end = array_slice($list_side, -3, 3, true); // lấy 3 phần tử cuối của mảng
     ?>
-    <header>
-        <div class="collapse" id="navbarHeader" style="background-color:#472270;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-md-7 py-4">
-                        <h4 class="text-white">About</h4>
-                        <p class="text-muted">Add some information about the album below, the author, or any other
-                            background context. Make it a few sentences long so folks can pick up some informative
-                            tidbits. Then, link them off to some social networking sites or contact information.</p>
-                    </div>
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Contact</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white text-decoration-none"><i class="znake-icon-twitter text-white"> Follow on Twitter</i></a></li>
-                            <li><a href="#" class="text-white text-decoration-none"><i class="znake-icon-facebook text-white"> Like on Facebook</i></a></li>
-                            <li><a href="https://github.com/nguyenthanhduy220507/WebBlog" class="text-white text-decoration-none"><i class="znake-icon-github text-primary"> </i> Github</a></li>
-                            <li><a href="/client/group.html" class="text-white text-decoration-none"><i class="znake-icon-spotify-user text-primary"> </i> Group</a></li>
-                            <li><a href="/client/contact.html" class="text-white text-decoration-none"><i class="znake-icon-bancontact text-primary"> </i> Liên Hệ</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-            <div class="container">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <i class="znake-icon-bigcartel">
-                        <strong> Home</strong>
-                    </i>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
+    <?php 
+        require 'header.php';
+    ?>
     <main>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -148,20 +106,9 @@
         require '../admin/prev_next.php';
         ?>
     </main>
-    <footer class="text-muted py-5 bg-dark">
-        <div class="container">
-            <p class="float-end mb-1">
-                <a href="#" class="text-decoration-none text-white fw-bold fs-4">Back to top</a>
-            </p>
-            <p class="mb-1">273 An Dương Vương Quận 5 Thành Phố Hồ Chí Minh &copy; Coppy right!</p>
-            <p class="mb-0">Công Nghệ Thông Tin Khóa K20 <a href="#" class="text-white text-decoration-none">&copy;SGU-fit</a> Web Blog <a href="#" class="text-decoration-none text-white">Python Linux Mã Nguồn Mở</a>.</p>
-        </div>
-    </footer>
-
-
+    <?php 
+        require 'footer.php';
+    ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
 </body>
-
 </html>

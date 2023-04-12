@@ -1,5 +1,5 @@
 <nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-center">
+    <ul class="pagination justify-content-center mt-5">
       <li class="page-item<?php if ($page == 1) echo ' disabled'; ?>">
         <?php if ($page > 1) { ?>
           <a class="page-link" href="?page=<?php echo $page - 1 ?>&search=<?php echo $search ?>">Previous</a>
