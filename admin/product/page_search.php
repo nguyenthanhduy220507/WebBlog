@@ -1,5 +1,5 @@
 <?php
-    require '../client/connect.php';
+    require 'connect.php';
 
     //search theo pages
     $search = '';

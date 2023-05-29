@@ -2,9 +2,9 @@
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    require '../client/connect.php';
+    require '../product/connect.php';
 
-    $sql = "DELETE FROM products WHERE id = $id";
+    $sql = "DELETE FROM contact WHERE id = $id";
 
     if(mysqli_query($ket_noi, $sql)) {
         header('location:index.php?succesful=Xóa thành công');

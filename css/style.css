@@ -110,3 +110,69 @@ body {
       margin-top: 7rem;
     }
   }
+
+/* css giao diện nổi */
+  #footer {
+    grid-area: now-playing-bar;
+    width: 100%;
+    background: linear-gradient(90deg, #2e3948, #5e7594);
+    color: white;
+    height: auto;
+  }
+#footer #now-playing-bar {
+    padding: 0.75rem 1rem;
+    gap: 1.5rem;
+}
+#footer #now-playing-bar #data {
+    flex: 1;
+}
+#footer #now-playing-bar #data h6 {
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin: 0;
+}
+#footer #now-playing-bar #data p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    }
+#footer #now-playing-bar #btn-sign-up a {
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    color: #7c5cff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+#footer #now-playing-bar #btn-login a {
+  border: 1px solid white;
+  background-color: #5e7594;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+/* Responsive styles for the footer UI */
+/* @media (max-width: 767px) {
+  #footer {
+    width: 90%;
+    left: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #footer {
+    width: 70%;
+    left: 15%;
+  }
+}
+
+@media (min-width: 992px) {
+  #footer {
+    width: 50%;
+    left: 25%;
+  }
+} */

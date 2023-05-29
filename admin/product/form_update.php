@@ -15,7 +15,7 @@
     <?php 
       $id = $_GET['id'];
 
-      require '../client/connect.php';
+      require 'connect.php';
       $sql = "SELECT * FROM products 
       where
       id = $id";

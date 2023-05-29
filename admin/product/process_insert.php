@@ -4,7 +4,7 @@
   $content = $_POST['content'];
   $image = $_FILES['image'];
 
-  $folder = 'photos/';
+  $folder = '../photos/';
   $file_extension = explode('.', $image['name'])[1];
   $file_name = time() . '.' . $file_extension;
   $path_file = $folder . $file_name;
@@ -18,7 +18,7 @@
     exit();
   }
 
-  require '../client/connect.php';
+  require 'connect.php';
 
   $sql = "INSERT INTO products (title, description, content,image) VALUES ('$title', '$description', '$content','$file_name')";
   $result = mysqli_query($ket_noi,$sql);

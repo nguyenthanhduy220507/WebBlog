@@ -21,7 +21,7 @@
     <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
     <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#7952b3">
-    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/Znake-Spotify-v1.0/style.css">
 </head>
 <body>
@@ -29,12 +29,13 @@
         require 'header.php';
     ?>
     <?php 
-        require '../admin/error_succesful.php';
+        require '../admin/product/error_succesful.php';
         require 'form_contact.php';
     ?>
     <?php 
         require 'footer.php';
     ?>
+    <script src="../js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>

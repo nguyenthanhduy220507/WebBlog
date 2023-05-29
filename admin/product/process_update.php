@@ -6,7 +6,7 @@
   $image_new = $_FILES['image_new'];
   
   if(isset($image_new) && $image_new['size'] > 0){
-      $folder = 'photos/';
+      $folder = '../photos/';
       $file_extension = explode('.', $image_new['name'])[1];
       $file_name = time() . '.' . $file_extension;
       $path_file = $folder . $file_name;
@@ -22,7 +22,7 @@
     exit();
   }
 
-  require '../client/connect.php';
+  require 'connect.php';
 
   $sql = "update products
   set

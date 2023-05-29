@@ -27,8 +27,8 @@
 <body>
     <?php
     require 'connect.php';
-    require '../admin/search.php';
-    require '../admin/page_search.php';
+    require '../admin/product/search.php';
+    require '../admin/product/page_search.php';
 
     $sql = "select * from products";
     $result_silde = mysqli_query($ket_noi, $sql);
@@ -103,12 +103,14 @@
             </div>
         </div>
         <?php
-        require '../admin/prev_next.php';
+        require '../admin/product/prev_next.php';
         ?>
     </main>
     <?php 
         require 'footer.php';
+        mysqli_close($ket_noi);
     ?>
+    <script src="../js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

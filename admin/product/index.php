@@ -16,14 +16,14 @@
 
 <body>
   <?php
-  require '../client/connect.php';
-  require 'search.php';
+  require 'connect.php';
+  require 'search.php';  
   require 'page_search.php';
   ?>
 
   <h1 class="ms-2 text-center">ADMIN</h1>
   <?php
-    require 'menu.php';
+    require '../menu.php';
   ?>
   <a href="form_insert.php" class="btn btn-primary text-white ms-2 mb-2">Create New Products</a><br>
   <?php
@@ -53,7 +53,7 @@
         <td><?php echo $list['title'] ?></td>
         <td><?php echo $list['description'] ?></td>
         <td>
-          <img src="photos/<?php echo $list['image'] ?>" alt="" height="100">
+          <img src="../photos/<?php echo $list['image'] ?>" alt="" height="100">
         </td>
         <td class="">
           <a href="show.php?id=<?php echo $list['id'] ?>" class="btn btn-info text-white ms-2 ">Show</a>
@@ -65,6 +65,7 @@
   </table>
   <?php 
     require 'prev_next.php';
+    mysqli_close($ket_noi);
   ?>
 
 

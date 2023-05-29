@@ -49,7 +49,6 @@
             <p class="lead mb-0"><a href="show.php?id=<?php echo $list['id'] ?>" class="text-white fw-bold">Continue reading...</a></p>
           </div>
         </div>
-
       <?php endforeach ?>
     <?php endif ?>
 

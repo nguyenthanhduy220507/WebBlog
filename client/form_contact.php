@@ -14,8 +14,8 @@
                     <input type="text" class="form-control" name = "phone">
                 </div>
                 <div class="mb-2">
-                    <label class="form-label">Ghi Chú: </label>
-                    <textarea class="form-control" name="content" id="" cols="30" rows="5"></textarea>
+                    <label class="form-label">Message: </label>
+                    <textarea class="form-control" name="message" id="" cols="30" rows="5"></textarea>
                 </div>
                 <div class="d-flex justify-content-center mt-5">
                     <button type="submit" class="btn btn-primary">Submit</button>

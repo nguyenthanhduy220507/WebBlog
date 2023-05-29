@@ -13,7 +13,7 @@
   <body>
   	<?php 
     $id = $_GET['id'];
-  	    require '../client/connect.php';
+  	    require 'connect.php';
 
       $sql = "select * from products
       where id = $id";
@@ -29,7 +29,7 @@
      <p>
  		<?php echo nl2br($result['content']) ?>
  	</p>
- 	<img src="photos/<?php echo $result['image'] ?>">
+ 	<img src="../photos/<?php echo $result['image'] ?>">
 
 	<?php mysqli_close($ket_noi); ?>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
